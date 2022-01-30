@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:background="#FF6600"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+  <androidx.appcompat.widget.Toolbar
+      android:layout_width="match_parent"
+      android:layout_height="?android:attr/actionBarSize">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+      android:gravity="clip_vertical">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_alignParentStart="true"
+          android:layout_marginStart="8dp"
+          android:fontFamily="@font/cherry_cream_soda"
+          android:gravity="center"
+          android:text="FOODIES"
+          android:textColor="@color/white"
+          android:textSize="24sp"
+          android:textStyle="bold" />
+
+      <Spinner
+          android:id="@+id/spinner_tags"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_alignParentEnd="true"
+          android:entries="@array/tags"
+
+          android:gravity="center"
+          android:soundEffectsEnabled="true" />
+
+
+
+    </RelativeLayout>
+
+
+  </androidx.appcompat.widget.Toolbar>
+
+  <androidx.cardview.widget.CardView
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+
+      android:layout_marginLeft="8dp"
+      android:layout_marginRight="8dp"
+      app:cardBackgroundColor="#FF6600"
+      app:cardElevation="50dp">
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchview_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:iconifiedByDefault="false"
+
+
+        app:queryHint="Search Your Recipy..." />
+
+
+  </androidx.cardview.widget.CardView>
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/recycl_Random"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_margin="4dp" />
+
+</LinearLayout>
